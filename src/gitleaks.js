@@ -197,8 +197,6 @@ async function ScanPullRequest(
       let results = sarif.runs[0].results[i];
       const commit_sha = results.partialFingerprints.commitSha;
       const fingerprint =
-        commit_sha +
-        ":" +
         results.locations[0].physicalLocation.artifactLocation.uri +
         ":" +
         results.ruleId +
